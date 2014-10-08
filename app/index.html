@@ -10,6 +10,7 @@
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
+    <link rel="stylesheet" href="../bower_components/octicons/octicons/octicons.css">
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -20,30 +21,120 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="../bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+
   </head>
   <body>
+    <div class="full">
 
-    <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Normalize CSS</li>
+      <div class="header">
+        <div class="header-left">
+          <div class="cat">
+            <a href="#"><span class="mega-octicon octicon-mark-github"></span></a>
+          </div> <!--cat-->
+          <div class="search">
+            <form><input type="text" name="search" placeholder="Search GitHub"></form>
+          </div> <!--search-->
+          <ul class="head-middle">
+            <a href="#"><li>Explore</li></a>
+            <a href="#"><li>Gist</li></a>
+            <a href="#"><li>Blog</li></a>
+            <a href="#"><li>Help</li></a>
+          </ul>
+        </div> <!--header-left-->
 
-        <li>Sass</li>
+        <div class="header-right">
+          <a href="#"><img class="me-head" src="/images/me.jpg"></img>
+          <p class="user">chwsimps</p></a>
+          <div class="icons">
+            <a href="#"><span class="octicon octicon-plus"></span></a>
+            <a href="#"><span class="octicon octicon-inbox"></span></a>
+            <a href="#"><span class="octicon octicon-gear"></span></a>
+            <a href="#"><span class="octicon octicon-sign-out"></span></a>
+          </div>
+        </div>  <!--header-right-->
+      </div> <!--header-->
 
+      <div class="middle">
+        <div class="middle-left">
+          <div class="user-box">
+            <a href="#"><img class="user-img" src="/images/me.jpg"></img></a>
+            <h1>Chase Simpson</h1>
+            <p>chwsimps</p>
+          </div> <!--user-box-->
+          <div class="user-info">
+            <span class="octicon octicon-location"> Atlanta, GA</span>
+            <span class="octicon octicon-mail"><a href="#"> chase.w.simpson1@gmail.com</a></span>
+            <span class="octicon octicon-clock"> Joined on Sep 22, 2014</span>
+          </div> <!--user-info-->
+          <div class="follow">
+            <div class="follow1">
+              <h2>0</h2>
+              <p>Followers</p>
+            </div>
+            <div class="follow2">
+              <h2>1</h2>
+              <p>Starred</p>
+            </div>
+            <div class="follow3">
+              <h2>0</h2>
+              <p>Following</p>
+            </div>
+          </div> <!--follow-->
+          <div class="org">
+            <h4>Organizations</h4>
+            <a href="#"><img class="js-hacker" src="images/js-hacker.jpeg"></img></a>
+          </div>
+        </div> <!--middle-left-->
 
-        <li>Modernizr</li>
+        <div class="middle-right">
+          <button class="profile">
+            <span class="octicon octicon-pencil"></span>Edit Profile
+          </button>
+          <div class="title-links">
+            <span class="octicon octicon-diff-added"> Contributions</span>
+            <span class="octicon octicon-repo"> Repositories</span>
+            <span class="octicon octicon-rss"> Public Activity</span>
+          </div> <!--title-links-->
+          <div class="search-area">
+            <form><input type="text" name="search" placeholder="Find a Repository..."><input type="submit" value="Search">
+            </form>
+            <ul class="search-list">
+              <a href="#"><li>All</li></a>
+              <a href="#"><li>Public</li></a>
+              <a href="#"><li>Private</li></a>
+              <a href="#"><li>Sources</li></a>
+              <a href="#"><li>Forks</li></a>
+              <a href="#"><li>Mirrors</li></a>
+            </ul>
+            <button class="new">
+              <span class="octicon octicon-repo"></span>NEW
+            </button>
+          </div> <!--search-area-->
+          <div class="repo">
 
+          </div>
+        </div> <!--middle-right-->
+      </div> <!--middle-->
 
-        <li>Bourbon & Neat</li>
-
-
-        <li>UnderscoreJS</li>
-
-      </ul>
-      <p>Don't forget to update your readme file!!</p>
-    </div>
+      <div class="footer">
+        <ul class="foot-left">
+          <li>© 2014 GitHub, Inc.</li>
+          <a href="#"><li>Terms</li></a>
+          <a href="#"><li>Privacy</li></a>
+          <a href="#"><li>Security</li></a>
+          <a href="#"><li>Contact</li></a>
+        </ul>
+        <span class="octicon octicon-mark-github"></span>
+        <ul class="foot-right">
+          <a href="#"><li>Status</li></a>
+          <a href="#"><li>API</li></a>
+          <a href="#"><li>Training</li></a>
+          <a href="#"><li>Shop</li></a>
+          <a href="#"><li>Blog</li></a>
+          <a href="#"><li>About</li></a>
+        </ul>
+      </div>
+    </div> <!--full-->
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->

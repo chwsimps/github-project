@@ -3,24 +3,169 @@
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
 // Custom Styles
-body {
-  background: #fafafa;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #333;
+
+* {
+  list-style: none;
+  text-decoration: none;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 600px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+a {
+  color: black;
+}
+
+// Header ================================
+.header {
+  width: 100%;
+  height: 50px;
+  background-color: HSLA(0, 0%, 96%, 1);
+  border-bottom: solid 1px HSLA(0, 0%, 90%, 1);
+}
+
+//Header Left =============================
+
+.header-left {
+  float: left;
+  .cat {
+    float: left;
+    display: block;
+    margin-left: 120px;
+    margin-top: 9px;
   }
+  .search {
+    float: left;
+    display: inline-block;
+    margin: auto;
+    margin: 13px 10px;
+  }
+}
+
+.head-middle {
+  padding: 0;
+  display: inline-block;
+  float: left;
+}
+  li {
+    display: inline-block;
+    float: left;
+    padding: 0px 10px;
+  }
+
+// Header Right ============================
+
+.header-right {
+  .me-head {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-top: 15px;
+    margin-left: 160px;
+    border-radius: 3px;
+  }
+  .user {
+    float: left;
+    margin-left: 5px;
+  }
+  .icons {
+    float: left;
+    display: inline-block;
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+  .icons span {
+    padding: 0px 5px;
+  }
+}
+
+// Middle Section ==========================
+
+.middle {
+  @include outer-container;
+}
+
+// Middle Left ==============================
+
+.middle-left {
+  @include span-columns(3);
+  margin-top: 20px;
+}
+
+.user-box {
+  border-bottom: solid 1px HSLA(0, 0%, 93%, 1);
+}
+
+.user-info {
+  border-bottom: solid 1px HSLA(0, 0%, 93%, 1);
+}
+
+.follow {
+  float: left;
+  display: inline-block;
+  border-bottom: solid 1px HSLA(0, 0%, 93%, 1);
+  .follow1 {
+    float: left;
+  }
+  .follow2 {
+    float: left;
+  }
+  .follow3 {
+    float: left;
+  }
+}
+
+.org {
+  height: 500px;
+  .js-hacker {
+    width: 50px;
+  }
+}
+
+
+
+// Middle Right ============================
+
+.middle-right {
+  @include span-columns(9);
+  margin-top: 20px;
+}
+
+.profile {
+  float: right;
+  background-color: HSLA(0, 0%, 95%, 1);
+  border-radius: 2px;
+  border: solid 1px HSLA(0, 0%, 84%, 1);
+}
+
+.title-links {
+  padding-bottom: 10px;
+  border-bottom: solid 1px HSLA(0, 0%, 84%, 1);
+}
+
+.search-area {
+  border-bottom: solid 1px HSLA(0, 0%, 84%, 1);
+  padding-bottom: 30px;
+  form {
+    float: left;
+    margin-top: 16px;
+  }
+}
+
+.search-list {
+  float: left;
+}
+
+// Repo area ==============================
+
+.repo {
+  width: 730px;
+  height: 115px;
+  border-bottom: solid 1px HSLA(0, 0%, 84%, 1);
+}
+
+// Footer ================================
+
+.footer {
+  width: 980px;
+  height: 100px;
+  margin: 0px 120px;
+  border-top: solid 1px HSLA(0, 0%, 84%, 1);
 }
