@@ -243,6 +243,7 @@ a {
   margin: 20px 0px;
   li {
     padding: 5px;
+    color: HSLA(210, 53%, 51%, 1);
   }
 }
 
@@ -265,6 +266,14 @@ a {
   width: 730px;
   height: 115px;
   border-bottom: solid 1px HSLA(0, 0%, 84%, 1);
+}
+
+.repro-left {
+  float: left;
+}
+
+.repro-right {
+  float: right;
 }
 
 // Footer ================================

@@ -57,13 +57,15 @@
       <div class="middle">
         <div class="middle-left">
           <div class="user-box">
-            <a href="#"><img class="user-img" src="/images/me.jpg"></img></a>
-            <h1>Chase Simpson</h1>
-            <p>chwsimps</p>
+            <script type="text/template" class="user-img">
+            <a href="#"><img class="user-img" src="<%= avatar_url %>"></img></a>
+            <h1><%= name %></h1>
+            <p><%= login %></p>
+            </script>
           </div> <!--user-box-->
           <div class="user-info">
-            <span class="octicon octicon-location"> Atlanta, GA</span>
-            <span class="octicon octicon-mail"><a href="#"> chase.w.simpson1@gmail.com</a></span>
+            <span class="octicon octicon-location"></span>
+            <span class="octicon octicon-mail"><a href="#"></a></span>
             <span class="octicon octicon-clock"> Joined on Sep 22, 2014</span>
           </div> <!--user-info-->
           <div class="follow">
@@ -109,8 +111,18 @@
             </button>
           </div> <!--search-area-->
           <div class="repo">
-
-          </div>
+            <div class="repro-left">
+              <a href="#"><h3>github-project</h3></a>
+              <p>Updated 23 hours ago</p>
+            </div>
+            <div class="repro-right">
+              <ul>
+                <li>Javascript</li>
+                <a href="#"><li><span class="octicon octicon-star"></span> 0</li></a>
+                <a href="#"><li><span class="octicon octicon-git-branch"> 0</span></li></a>
+              </ul>
+            </div>
+          </div> <!--repo-->
         </div> <!--middle-right-->
       </div> <!--middle-->
 
@@ -134,6 +146,16 @@
       </div>
     </div> <!--full-->
 
+
+
+//Middle Left/User Info ====================
+
+
+
+
+
+
+============================================
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
@@ -141,6 +163,7 @@
     <!-- endbower -->
     <!-- endbuild -->
 
+        <script src="scripts/token.js"></script>
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->

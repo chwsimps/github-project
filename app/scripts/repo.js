@@ -1,4 +1,4 @@
-var repo = {
+var repo = [{
     "id": 24728578,
     "name": "accordian",
     "full_name": "chwsimps/accordian",
@@ -781,3 +781,4 @@ var repo = {
     "watchers": 0,
     "default_branch": "master"
   }
+]

@@ -1,4 +1,4 @@
-var star = {
+var star = [{
     "id": 24637952,
     "name": "chwsimps.github.io",
     "full_name": "chwsimps/chwsimps.github.io",
@@ -171,4 +171,4 @@ var star = {
     "open_issues": 0,
     "watchers": 1,
     "default_branch": "master"
-  }
+  }]
