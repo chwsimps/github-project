@@ -58,6 +58,7 @@ a {
     margin: 13px 10px;
     .textbox {
       width: 360px;
+      border-radius: 3px;
     }
   }
 }
@@ -187,31 +188,75 @@ a {
 .middle-right {
   @include span-columns(7.7);
   margin-top: 20px;
+  width: 730px;
 }
 
 .profile {
   float: right;
+  margin-top: -5px;
+  margin-right: 4px;
   background-color: HSLA(0, 0%, 95%, 1);
-  border-radius: 2px;
+  border-radius: 3px;
   border: solid 1px HSLA(0, 0%, 84%, 1);
+  font-size: 13px;
+  font-weight: bold;
 }
 
 .title-links {
   padding-bottom: 10px;
   border-bottom: solid 1px HSLA(0, 0%, 84%, 1);
+  span {
+    padding-left: 15px;
+  }
 }
 
 .search-area {
   border-bottom: solid 1px HSLA(0, 0%, 84%, 1);
-  padding-bottom: 30px;
+  padding-bottom: 14px;
   form {
     float: left;
     margin-top: 16px;
   }
 }
 
+.search-repo {
+  width: 260px;
+  height: 35px;
+  border-radius: 3px;
+}
+
+.search-btn {
+  height: 36px;
+  width: 70px;
+  margin-left: 5px;
+  border-radius: 3px;
+  background-color: HSLA(0, 0%, 95%, 1);
+  border: solid 1px HSLA(0, 0%, 84%, 1);
+  font-size: 13px;
+  font-weight: bold;
+}
+
 .search-list {
   float: left;
+  padding-left: 35px;
+  font-size: 13px;
+  margin: 20px 0px;
+  li {
+    padding: 5px;
+  }
+}
+
+.new {
+  margin-left: 15px;
+  margin-top: 16px;
+  width: 70px;
+  height: 36px;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  background-color: HSLA(105, 59%, 63%, 1);
+  border: solid 1px HSLA(104, 44%, 46%, 1);
+  border-radius: 3px;
 }
 
 // Repo area ==============================
