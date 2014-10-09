@@ -2,6 +2,22 @@
 @import '../../bower_components/bourbon/dist/bourbon';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
+@mixin follow {
+  float: left;
+  text-align: center;
+  h2 {
+    color: HSLA(210, 53%, 51%, 1);
+    margin-bottom: 0;
+    margin-top: 15px;
+    font-size: 30px;
+  }
+  p {
+    margin-top: 3px;
+    margin-bottom: 15px;
+    font-size: 13px;
+  }
+}
+
 // Custom Styles
 
 * {
@@ -11,6 +27,10 @@
 
 a {
   color: black;
+}
+
+.full {
+  width: 1280px;
 }
 
 // Header ================================
@@ -28,7 +48,7 @@ a {
   .cat {
     float: left;
     display: block;
-    margin-left: 120px;
+    margin-left: 150px;
     margin-top: 9px;
   }
   .search {
@@ -36,6 +56,9 @@ a {
     display: inline-block;
     margin: auto;
     margin: 13px 10px;
+    .textbox {
+      width: 360px;
+    }
   }
 }
 
@@ -43,6 +66,8 @@ a {
   padding: 0;
   display: inline-block;
   float: left;
+  font-size: 13px;
+  font-weight: bold;
 }
   li {
     display: inline-block;
@@ -58,21 +83,24 @@ a {
     width: 20px;
     height: 20px;
     margin-top: 15px;
-    margin-left: 160px;
+    margin-left: 140px;
     border-radius: 3px;
   }
   .user {
     float: left;
     margin-left: 5px;
+    font-size: 13px;
+    font-weight: bold;
   }
   .icons {
     float: left;
     display: inline-block;
     margin-top: 15px;
-    margin-left: 10px;
+    margin-left: 15px;
+    padding-right: 150px;
   }
   .icons span {
-    padding: 0px 5px;
+    padding: 0px 6px;
   }
 }
 
@@ -80,51 +108,84 @@ a {
 
 .middle {
   @include outer-container;
+  margin: 20px 150px 0px;
 }
 
-// Middle Left ==============================
+// Middle Left=============================
 
 .middle-left {
-  @include span-columns(3);
-  margin-top: 20px;
+  @include span-columns(3.3);
+  width: 230px;
+  margin-right: 20px;
+
 }
 
 .user-box {
   border-bottom: solid 1px HSLA(0, 0%, 93%, 1);
+  .user-img {
+    width: 230px;
+    height: 230px;
+    border-radius: 5px;
+  }
+  h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 26px;
+  }
+  p {
+    display: inline-block;
+    font-size: 22px;
+    margin-top: 0;
+  }
 }
+
 
 .user-info {
   border-bottom: solid 1px HSLA(0, 0%, 93%, 1);
+  margin-top: 15px;
+  margin-bottom: 0;
+  padding-bottom: 5px;
+  span {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
 }
 
 .follow {
   float: left;
   display: inline-block;
   border-bottom: solid 1px HSLA(0, 0%, 93%, 1);
-  .follow1 {
-    float: left;
-  }
-  .follow2 {
-    float: left;
-  }
-  .follow3 {
-    float: left;
-  }
+  margin-bottom: 25px;
+}
+
+.follow1 {
+  @include follow;
+  padding-left: 7px;
+}
+
+.follow2 {
+  @include follow;
+  padding-left: 30px;
+}
+
+.follow3 {
+  @include follow;
+  padding-left: 30px;
+  padding-right: 7px;
 }
 
 .org {
-  height: 500px;
-  .js-hacker {
-    width: 50px;
-  }
+  margin-top: 20px;
 }
 
-
+.js-hacker {
+    width: 50px;
+}
 
 // Middle Right ============================
 
 .middle-right {
-  @include span-columns(9);
+  @include span-columns(7.7);
   margin-top: 20px;
 }
 
@@ -168,4 +229,43 @@ a {
   height: 100px;
   margin: 0px 120px;
   border-top: solid 1px HSLA(0, 0%, 84%, 1);
+}
+
+.foot-left {
+  display: inline-block;
+  padding: 0;
+  width: 700px;
+  font-size: 12px;
+  margin: 43px 0px;
+  li {
+    color: HSLA(210, 53%, 51%, 1);
+    padding-left: 15px;
+    padding-right: 0px;
+  }
+  .copyright {
+    padding-left: 0;
+    color: HSLA(0, 0%, 47%, 1);
+  }
+  span {
+    padding-left: 175px;
+    color: HSLA(0, 0%, 80%, 1);
+  }
+}
+
+.foot-right {
+  float: right;
+  display: inline-block;
+  padding: 0;
+  width: 256px;
+  font-size: 12px;
+  color: HSLA(210, 53%, 51%, 1);
+  margin: 43px 0px;
+  li {
+    color: HSLA(210, 53%, 51%, 1);
+    padding-left: 15px;
+    padding-right: 0px;
+  }
+  .status {
+    padding-left: 0;
+  }
 }
