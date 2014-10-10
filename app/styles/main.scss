@@ -6,7 +6,7 @@
   float: left;
   text-align: center;
   h2 {
-    color: HSLA(210, 53%, 51%, 1);
+    @include blue;
     margin-bottom: 0;
     margin-top: 15px;
     font-size: 30px;
@@ -14,7 +14,31 @@
   p {
     margin-top: 3px;
     margin-bottom: 15px;
-    font-size: 13px;
+    font-size: 12px;
+    color: HSLA(0, 0%, 60%, 1);
+    &:hover {
+      @include blue;
+    }
+  }
+}
+
+@mixin btn {
+  background-color: HSLA(0, 0%, 95%, 1);
+  border-radius: 3px;
+  border: solid 1px HSLA(0, 0%, 84%, 1);
+  font-size: 13px;
+  font-weight: bold;
+}
+
+@mixin blue {
+  color: HSLA(210, 53%, 51%, 1);
+}
+
+@mixin title-links {
+  float: left;
+  display: inline-block;
+  span {
+    padding: 10px 10px;
   }
 }
 
@@ -48,22 +72,26 @@ a {
   .cat {
     float: left;
     display: block;
-    margin-left: 150px;
-    margin-top: 9px;
+    margin-left: 145px;
+    margin-top: 8px;
   }
   .search {
     float: left;
     display: inline-block;
     margin: auto;
-    margin: 13px 10px;
+    margin: 10px;
     .textbox {
       width: 360px;
+      height: 28px;
       border-radius: 3px;
+      font-size: 13px;
+      border: 1px solid #cccccc;
     }
   }
 }
 
 .head-middle {
+  margin-top: 16px;
   padding: 0;
   display: inline-block;
   float: left;
@@ -73,36 +101,56 @@ a {
   li {
     display: inline-block;
     float: left;
-    padding: 0px 10px;
+    padding: 0px 8px;
+    &:hover {
+      @include blue;
+    }
   }
 
 // Header Right ============================
 
-.header-right {
-  .me-head {
-    float: left;
-    width: 20px;
-    height: 20px;
-    margin-top: 15px;
-    margin-left: 140px;
-    border-radius: 3px;
+.me-head {
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-top: 14px;
+  margin-left: 140px;
+  border-radius: 3px;
+}
+.user {
+  float: left;
+  margin-left: 5px;
+  margin-top: 16px;
+  font-size: 13px;
+  font-weight: bold;
+  &:hover {
+    @include blue;
   }
-  .user {
-    float: left;
-    margin-left: 5px;
-    font-size: 13px;
-    font-weight: bold;
+}
+
+.icons {
+  float: left;
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: 15px;
+  padding-right: 150px;
+}
+.icons span {
+  padding: 0px 6px;
+  &:hover {
+    @include blue;
   }
-  .icons {
-    float: left;
-    display: inline-block;
-    margin-top: 15px;
-    margin-left: 15px;
-    padding-right: 150px;
-  }
-  .icons span {
-    padding: 0px 6px;
-  }
+}
+
+.circle {
+  border-radius: 50%;
+  border: solid 1px HSLA(0, 0%, 96%, 1);
+  width: 10px;
+  height: 10px;
+  background-color: HSLA(210, 53%, 58%, 1);
+  position: absolute;
+  margin-left: -17px;
+  margin-top: -3px;
 }
 
 // Middle Section ==========================
@@ -137,19 +185,38 @@ a {
     display: inline-block;
     font-size: 22px;
     margin-top: 0;
+    color: HSLA(0, 0%, 40%, 1);
+    font-weight: 100;
   }
 }
 
+.user-email {
+  @include blue;
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
 .user-info {
   border-bottom: solid 1px HSLA(0, 0%, 93%, 1);
   margin-top: 15px;
   margin-bottom: 0;
   padding-bottom: 5px;
-  span {
-    font-size: 15px;
-    margin-bottom: 10px;
+  .span1 {
+    padding-left: 2px;
   }
+  span {
+    color: HSLA(0, 0%, 80%, 1);
+  }
+  p {
+    display: inline-block;
+    font-size: 14px;
+    margin: 5px 5px;
+  }
+}
+
+.user-email {
+  @include blue;
 }
 
 .follow {
@@ -180,33 +247,49 @@ a {
 }
 
 .js-hacker {
-    width: 50px;
+    width: 40px;
 }
 
 // Middle Right ============================
 
 .middle-right {
   @include span-columns(7.7);
-  margin-top: 20px;
   width: 730px;
 }
 
 .profile {
+  @include btn;
   float: right;
-  margin-top: -5px;
+  margin-top: 5px;
   margin-right: 4px;
-  background-color: HSLA(0, 0%, 95%, 1);
-  border-radius: 3px;
-  border: solid 1px HSLA(0, 0%, 84%, 1);
-  font-size: 13px;
-  font-weight: bold;
+  &:hover {
+    background-color: HSLA(0, 0%, 90%, 1);
+  }
 }
 
-.title-links {
-  padding-bottom: 10px;
+.title-area {
   border-bottom: solid 1px HSLA(0, 0%, 84%, 1);
-  span {
-    padding-left: 15px;
+  height: 38px;
+}
+
+.title-links1 {
+  @include title-links;
+  a {
+    color: HSLA(0, 0%, 40%, 1);
+  }
+}
+
+.title-links2 {
+  @include title-links;
+  border: solid 1px HSLA(0, 0%, 84%, 1);
+  border-bottom: solid 1px white;
+  border-radius: 3px;
+}
+
+.title-links3 {
+  @include title-links;
+  a {
+    color: HSLA(0, 0%, 40%, 1);
   }
 }
 
@@ -216,24 +299,26 @@ a {
   form {
     float: left;
     margin-top: 16px;
+    font-size: 13px;
   }
 }
 
 .search-repo {
   width: 260px;
-  height: 35px;
+  height: 36px;
   border-radius: 3px;
+  border: 1px solid #cccccc;
 }
 
 .search-btn {
+  @include btn;
   height: 36px;
   width: 70px;
   margin-left: 5px;
   border-radius: 3px;
-  background-color: HSLA(0, 0%, 95%, 1);
-  border: solid 1px HSLA(0, 0%, 84%, 1);
-  font-size: 13px;
-  font-weight: bold;
+  &:hover {
+    background-color: HSLA(0, 0%, 90%, 1);
+  }
 }
 
 .search-list {
@@ -243,8 +328,12 @@ a {
   margin: 20px 0px;
   li {
     padding: 5px;
-    color: HSLA(210, 53%, 51%, 1);
+    @include blue;
   }
+}
+
+.search-list li:hover {
+  text-decoration: underline;
 }
 
 .new {
@@ -258,31 +347,66 @@ a {
   background-color: HSLA(105, 59%, 63%, 1);
   border: solid 1px HSLA(104, 44%, 46%, 1);
   border-radius: 3px;
+  &:hover {
+    background-color: HSLA(104, 44%, 46%, 1);
+  }
 }
 
 // Repo area ==============================
 
 .repo {
   width: 730px;
-  height: 115px;
+  height: 110px;
   border-bottom: solid 1px HSLA(0, 0%, 84%, 1);
 }
 
-.repro-left {
+.repo-left {
   float: left;
+  width: 575px;
+  display: inline-block;
+  padding-top: 10px;
+  h3 {
+    margin-bottom: 15px;
+    @include blue;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  p {
+    width: 575px;
+    margin-top: 0;
+    font-size: 13px;
+  }
 }
 
-.repro-right {
+.repo-right {
+  display: inline-block;
   float: right;
+  width: 126px;
+  padding-top: 19px;
+  p {
+    display: inline-block;
+    font-size: 12px;
+    color: HSLA(0, 0%, 54%, 1);
+    font-weight: bold;
+  }
+  span {
+    float: right;
+    font-size: 13px;
+    color: HSLA(0, 0%, 54%, 1);
+    padding-left: 12px;
+    padding-top: 14px;
+  }
 }
 
 // Footer ================================
 
 .footer {
-  width: 980px;
+  width: 985px;
   height: 100px;
-  margin: 0px 120px;
+  margin-left: 120px;
   border-top: solid 1px HSLA(0, 0%, 84%, 1);
+  margin-top: 40px;
 }
 
 .foot-left {
@@ -292,7 +416,7 @@ a {
   font-size: 12px;
   margin: 43px 0px;
   li {
-    color: HSLA(210, 53%, 51%, 1);
+    @include blue;
     padding-left: 15px;
     padding-right: 0px;
   }
@@ -312,10 +436,10 @@ a {
   padding: 0;
   width: 256px;
   font-size: 12px;
-  color: HSLA(210, 53%, 51%, 1);
+  @include blue;
   margin: 43px 0px;
   li {
-    color: HSLA(210, 53%, 51%, 1);
+    @include blue;
     padding-left: 15px;
     padding-right: 0px;
   }

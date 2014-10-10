@@ -22,6 +22,8 @@
     <script src="../bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
 
+<!--HTML=================================-->
+
   </head>
   <body>
     <div class="full">
@@ -32,7 +34,7 @@
             <a href="#"><span class="mega-octicon octicon-mark-github"></span></a>
           </div> <!--cat-->
           <div class="search">
-            <form><input type="text" class="textbox" placeholder="Search GitHub"></form>
+            <form><input type="text" class="textbox" placeholder=" Search GitHub"></form>
           </div> <!--search-->
           <ul class="head-middle">
             <a href="#"><li>Explore</li></a>
@@ -43,11 +45,14 @@
         </div> <!--header-left-->
 
         <div class="header-right">
-          <a href="#"><img class="me-head" src="/images/me.jpg"></img>
-          <p class="user">chwsimps</p></a>
+          <div class="av-me">
+            <!-- <a href="#"><img class="me-head" src="/images/me.jpg"></img> -->
+            <!-- <p class="user">chwsimps</p></a> -->
+          </div>
           <div class="icons">
             <a href="#"><span class="octicon octicon-plus"></span></a>
             <a href="#"><span class="octicon octicon-inbox"></span></a>
+            <span class="circle"></span>
             <a href="#"><span class="octicon octicon-gear"></span></a>
             <a href="#"><span class="octicon octicon-sign-out"></span></a>
           </div>
@@ -57,46 +62,52 @@
       <div class="middle">
         <div class="middle-left">
           <div class="user-box">
-            <script type="text/template" class="user-img">
-            <a href="#"><img class="user-img" src="<%= avatar_url %>"></img></a>
-            <h1><%= name %></h1>
-            <p><%= login %></p>
-            </script>
+            <!-- <a href="#"><img class="user-img" src="/images/me.jpg"></img></a>
+            <h1>Chase Simpson</h1>
+            <p>chwsimps</p> -->
           </div> <!--user-box-->
           <div class="user-info">
-            <span class="octicon octicon-location"></span>
-            <span class="octicon octicon-mail"><a href="#"></a></span>
-            <span class="octicon octicon-clock"> Joined on Sep 22, 2014</span>
+            <!-- <span class="octicon octicon-location"> Atlanta, GA</span>
+            <span class="octicon octicon-mail"> chase.w.simpson1@gmail.com<a href="#"></a></span>
+            <span class="octicon octicon-clock"> Joined on Sep 22, 2014</span> -->
           </div> <!--user-info-->
           <div class="follow">
             <div class="follow1">
-              <h2>0</h2>
-              <p>Followers</p>
+              <!-- <h2>0</h2>
+              <p>Followers</p> -->
             </div>
             <div class="follow2">
-              <h2>1</h2>
-              <p>Starred</p>
+              <!-- <h2>1</h2>
+              <p>Starred</p> -->
             </div>
             <div class="follow3">
-              <h2>0</h2>
-              <p>Following</p>
+              <!-- <h2>0</h2>
+              <p>Following</p> -->
             </div>
           </div> <!--follow-->
-          <h4 class="org">Organizations</h4>
-          <a href="#"><img class="js-hacker" src="images/js-hacker.jpeg"></img></a>
+          <div class="org-area">
+            <!-- <h4 class="org">Organizations</h4>
+            <a href="#"><img class="js-hacker" src="images/js-hacker.jpeg"></img></a> -->
+          </div>
         </div> <!--middle-left-->
 
         <div class="middle-right">
           <button class="profile">
             <span class="octicon octicon-pencil"></span> Edit Profile
           </button>
-          <div class="title-links">
-            <span class="octicon octicon-diff-added"> Contributions</span>
-            <span class="octicon octicon-repo"> Repositories</span>
-            <span class="octicon octicon-rss"> Public Activity</span>
-          </div> <!--title-links-->
+          <div class="title-area">
+            <div class="title-links1">
+              <a href="#"><span class="octicon octicon-diff-added"> Contributions</span></a>
+            </div>
+            <div class="title-links2">
+              <a href="#"><span class="octicon octicon-repo"> Repositories</span></a>
+            </div>
+            <div class="title-links3">
+              <a href="#"><span class="octicon octicon-rss"> Public Activity</span></a>
+            </div>
+          </div> <!--title-area-->
           <div class="search-area">
-            <form><input type="text" class="search-repo" placeholder="Find a Repository..."><input type="submit" class="search-btn" value="Search">
+            <form><input type="text" class="search-repo" placeholder=" Find a Repository..."><input type="submit" class="search-btn" value="Search">
             </form>
             <ul class="search-list">
               <a href="#"><li>All</li></a>
@@ -110,19 +121,19 @@
               <span class="octicon octicon-repo"></span> New
             </button>
           </div> <!--search-area-->
-          <div class="repo">
-            <div class="repro-left">
-              <a href="#"><h3>github-project</h3></a>
-              <p>Updated 23 hours ago</p>
-            </div>
-            <div class="repro-right">
-              <ul>
-                <li>Javascript</li>
-                <a href="#"><li><span class="octicon octicon-star"></span> 0</li></a>
-                <a href="#"><li><span class="octicon octicon-git-branch"> 0</span></li></a>
-              </ul>
-            </div>
-          </div> <!--repo-->
+          <div class="repo-area">
+            <div class="repo">
+              <div class="repo-left">
+                <a href="#"><h3>github-project</h3></a>
+                <p>Updated 23 hours ago</p>
+              </div>
+              <div class="repo-right">
+                <p>Javascript</p>
+                <a href="#"><span class="octicon octicon-star"></span></a>
+                <a href="#"><span class="octicon octicon-git-branch"></span></a>
+              </div>
+            </div> <!--repo-->
+          </div>
         </div> <!--middle-right-->
       </div> <!--middle-->
 
@@ -133,7 +144,7 @@
           <a href="#"><li>Privacy</li></a>
           <a href="#"><li>Security</li></a>
           <a href="#"><li>Contact</li></a>
-          <span class="octicon octicon-mark-github"></span>
+          <span class="mega-octicon octicon-mark-github"></span>
         </ul>
         <ul class="foot-right">
           <a href="#"><li class="status">Status</li></a>
@@ -148,14 +159,69 @@
 
 
 
-//Middle Left/User Info ====================
+<!--Header===============================-->
+<script type="text/template" id="av-me">
+  <a href="#"><img class="me-head" src="<%= avatar_url %>"/>
+  <p class="user"><%= login %></p></a>
+  </a>
+</script>
+
+<!--Medium===============================-->
+<!--Image (user-box)-->
+<script type="text/template" id="user-box">
+  <a href="#"><img class="user-img" src="<%= avatar_url %>"/></a>
+  <h1><%= name %></h1>
+  <p><%= login %></p>
+</script>
+
+<!--User Info (user-info)-->
+<script type="text/template" id="user-info">
+  <div class="span1">
+    <span class="octicon octicon-location"></span>
+    <p class="loc"><%= location %></p>
+  </div>
+    <span class="octicon octicon-mail"></span>
+    <a href="#"><p class="user-email"><%= email %></p></a>
+    <span class="octicon octicon-clock"></span>
+    <p class="joined"><%= created_at %></p>
+</script>
+
+<!--Follow (follow1-4)-->
+<script type="text/template" id="follow1">
+      <a href="#"><h2><%= followers %></h2>
+      <p>Followers</p></a>
+</script>
+<script type="text/template" id="follow2">
+      <a href="#"><h2><%= stargazers_count %></h2>
+      <p>Starred</p></a>
+</script>
+<script type="text/template" id="follow3">
+      <a href="#"><h2><%= following %></h2>
+      <p>Following</p></a>
+</script>
+
+<!--Organizations-->
+<script type="text/template" id="org-area">
+<h4 class="org">Organizations</h4>
+<a href="#"><img class="js-hacker" src="images/js-hacker.jpeg"></img></a>
+</script>
+
+<!--Repo-->
+<script type="text/template" id="repo-area">
+  <div class="repo">
+    <div class="repo-left">
+      <a href="#"><h3><%= name %></h3></a>
+      <p><%= pushed_at %></p>
+    </div>
+    <div class="repo-right">
+        <p><%= language %></p>
+        <a href="#"><span class="octicon octicon-star"><%= stargazers_count %></span></a>
+        <a href="#"><span class="octicon octicon-git-branch"><%= forks %></span></a>
+  </div>
+</script>
 
 
-
-
-
-
-============================================
+<!--=====================================-->
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
