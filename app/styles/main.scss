@@ -12,7 +12,7 @@
     font-size: 30px;
   }
   p {
-    margin-top: 3px;
+    margin-top: 0;
     margin-bottom: 15px;
     font-size: 12px;
     color: HSLA(0, 0%, 60%, 1);
@@ -72,8 +72,14 @@ a {
   .cat {
     float: left;
     display: block;
-    margin-left: 145px;
-    margin-top: 8px;
+    margin-left: 148px;
+    margin-top: 10px;
+    span {
+      font-size: 28px;
+    }
+    span:hover {
+      @include blue;
+    }
   }
   .search {
     float: left;
@@ -91,7 +97,7 @@ a {
 }
 
 .head-middle {
-  margin-top: 16px;
+  margin-top: 17px;
   padding: 0;
   display: inline-block;
   float: left;
@@ -114,7 +120,7 @@ a {
   width: 20px;
   height: 20px;
   margin-top: 14px;
-  margin-left: 140px;
+  margin-left: 150px;
   border-radius: 3px;
 }
 .user {
@@ -132,11 +138,10 @@ a {
   float: left;
   display: inline-block;
   margin-top: 15px;
-  margin-left: 15px;
-  padding-right: 150px;
+  margin-left: 11px;
 }
 .icons span {
-  padding: 0px 6px;
+  padding: 0px 10px;
   &:hover {
     @include blue;
   }
@@ -145,12 +150,12 @@ a {
 .circle {
   border-radius: 50%;
   border: solid 1px HSLA(0, 0%, 96%, 1);
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   background-color: HSLA(210, 53%, 58%, 1);
   position: absolute;
-  margin-left: -17px;
-  margin-top: -3px;
+  margin-left: -95px;
+  margin-top: 10px;
 }
 
 // Middle Section ==========================
@@ -171,6 +176,7 @@ a {
 
 .user-box {
   border-bottom: solid 1px HSLA(0, 0%, 93%, 1);
+  height: 305px;
   .user-img {
     width: 230px;
     height: 230px;
@@ -183,7 +189,7 @@ a {
   }
   p {
     display: inline-block;
-    font-size: 22px;
+    font-size: 20px;
     margin-top: 0;
     color: HSLA(0, 0%, 40%, 1);
     font-weight: 100;
@@ -199,14 +205,15 @@ a {
 
 .user-info {
   border-bottom: solid 1px HSLA(0, 0%, 93%, 1);
-  margin-top: 15px;
+  margin-top: 13px;
   margin-bottom: 0;
-  padding-bottom: 5px;
+  padding-bottom: 8px;
   .span1 {
     padding-left: 2px;
   }
   span {
     color: HSLA(0, 0%, 80%, 1);
+    padding-bottom: 0;
   }
   p {
     display: inline-block;
@@ -223,12 +230,13 @@ a {
   float: left;
   display: inline-block;
   border-bottom: solid 1px HSLA(0, 0%, 93%, 1);
-  margin-bottom: 25px;
+  margin-bottom: 24px;
+  height: 74px;
 }
 
 .follow1 {
   @include follow;
-  padding-left: 7px;
+  padding-left: 12px;
 }
 
 .follow2 {
@@ -242,12 +250,9 @@ a {
   padding-right: 7px;
 }
 
-.org {
-  margin-top: 20px;
-}
-
 .js-hacker {
     width: 40px;
+    margin-top: -5px;
 }
 
 // Middle Right ============================
@@ -260,8 +265,8 @@ a {
 .profile {
   @include btn;
   float: right;
-  margin-top: 5px;
-  margin-right: 4px;
+  height: 26px;
+  width: 107px;
   &:hover {
     background-color: HSLA(0, 0%, 90%, 1);
   }
@@ -295,10 +300,10 @@ a {
 
 .search-area {
   border-bottom: solid 1px HSLA(0, 0%, 84%, 1);
-  padding-bottom: 14px;
+  padding-bottom: 5px;
   form {
     float: left;
-    margin-top: 16px;
+    margin-top: 13px;
     font-size: 13px;
   }
 }
@@ -323,9 +328,9 @@ a {
 
 .search-list {
   float: left;
-  padding-left: 35px;
-  font-size: 13px;
-  margin: 20px 0px;
+  padding-left: 29px;
+  font-size: 14px;
+  margin: 17px 0px;
   li {
     padding: 5px;
     @include blue;
@@ -337,10 +342,9 @@ a {
 }
 
 .new {
-  margin-left: 15px;
-  margin-top: 16px;
+  margin: 13px 0px 4px 8px;
   width: 70px;
-  height: 36px;
+  height: 35px;
   font-size: 13px;
   font-weight: bold;
   color: white;
@@ -356,7 +360,7 @@ a {
 
 .repo {
   width: 730px;
-  height: 110px;
+  height: 111px;
   border-bottom: solid 1px HSLA(0, 0%, 84%, 1);
 }
 
@@ -395,9 +399,19 @@ a {
     float: right;
     font-size: 13px;
     color: HSLA(0, 0%, 54%, 1);
-    padding-left: 12px;
-    padding-top: 13px;
+    padding: 13px 3px 0px 10px;
+    &:hover {
+      @include blue;
+    }
   }
+}
+
+.small-star span::before {
+  padding-right: 2px;
+}
+
+.forks span::before {
+  padding-right: 3px;
 }
 
 // Footer ================================
@@ -420,6 +434,9 @@ a {
     @include blue;
     padding-left: 15px;
     padding-right: 0px;
+    &:hover {
+      text-decoration: underline;
+    }
   }
   .copyright {
     padding-left: 0;
@@ -427,7 +444,12 @@ a {
   }
   span {
     padding-left: 175px;
+    margin-top: -4px;
     color: HSLA(0, 0%, 80%, 1);
+    font-size: 25px;
+    &:hover {
+      color: HSLA(0, 0%, 70%, 1);
+    }
   }
 }
 
@@ -443,6 +465,9 @@ a {
     @include blue;
     padding-left: 15px;
     padding-right: 0px;
+    &:hover {
+      text-decoration: underline;
+    }
   }
   .status {
     padding-left: 0;

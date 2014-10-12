@@ -52,10 +52,10 @@
           <div class="icons">
             <a href="#" title="This is some text I want to display."><span class="octicon octicon-plus"></span></a>
             <a href="#"><span class="octicon octicon-inbox"></span></a>
-            <span class="circle"></span>
             <a href="#"><span class="octicon octicon-gear"></span></a>
             <a href="#"><span class="octicon octicon-sign-out"></span></a>
           </div>
+          <span class="circle"></span>
         </div>  <!--header-right-->
       </div> <!--header-->
 
@@ -215,8 +215,8 @@
     </div>
     <div class="repo-right">
         <p><%= language %></p>
-        <a href="#"><span class="octicon octicon-star"><%= stargazers_count %></span></a>
-        <a href="#"><span class="octicon octicon-git-branch"><%= forks %></span></a>
+        <a class="forks" href="#"><span class="octicon octicon-git-branch"><%= forks %></span></a>
+        <a class="small-star" href="#"><span class="octicon octicon-star"><%= stargazers_count %></span></a>
   </div>
 </script>
 
