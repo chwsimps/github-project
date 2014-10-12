@@ -90,7 +90,7 @@ a {
       width: 360px;
       height: 28px;
       border-radius: 3px;
-      font-size: 13px;
+      font-size: 12px;
       border: 1px solid #cccccc;
     }
   }
@@ -141,10 +141,14 @@ a {
   margin-left: 11px;
 }
 .icons span {
-  padding: 0px 10px;
+  padding: 0px 8px;
   &:hover {
     @include blue;
   }
+}
+
+.triangle span {
+  padding: 0;
 }
 
 .circle {
@@ -154,9 +158,33 @@ a {
   height: 12px;
   background-color: HSLA(210, 53%, 58%, 1);
   position: absolute;
-  margin-left: -95px;
+  margin-left: -85px;
   margin-top: 10px;
 }
+
+.popup1 {
+  display: inline-block;
+  width: 85px;
+  height: 25px;
+  background-color: HSLA(0, 0%, 19%, 1);
+  border-radius: 3px;
+  position: absolute;
+  margin-left: -64px;
+  margin-top: 30px;
+  span {
+    color: black;
+    position: absolute;
+    margin-top: -10px;
+    margin-left: 25px;
+  }
+  p {
+    margin: 0;
+    font-size: 12px;
+    padding: 5px 5px;
+    color: white;
+  }
+}
+
 
 // Middle Section ==========================
 
@@ -231,7 +259,8 @@ a {
   display: inline-block;
   border-bottom: solid 1px HSLA(0, 0%, 93%, 1);
   margin-bottom: 24px;
-  height: 74px;
+  margin-top: -5px;
+  height: 80px;
 }
 
 .follow1 {
@@ -351,6 +380,7 @@ a {
   background-color: HSLA(105, 59%, 63%, 1);
   border: solid 1px HSLA(104, 44%, 46%, 1);
   border-radius: 3px;
+  box-shadow: 0px 0px 10px 5px HSLA(104, 44%, 46%, 1) inset;
   &:hover {
     background-color: HSLA(104, 44%, 46%, 1);
   }

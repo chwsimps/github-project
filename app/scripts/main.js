@@ -73,3 +73,11 @@ $.getJSON(repo_url).done( function (user_info) {
 
   });
 });
+
+
+//Pop Up Messages ===========================
+
+$('.triangle').hover(function(){
+   var img = $(this).find('.popup1').attr('href');
+   $(img).fadeIn();
+});
