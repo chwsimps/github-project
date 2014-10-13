@@ -208,7 +208,7 @@
     <span class="octicon octicon-mail"></span>
     <a href="#"><p class="user-email"><%= email %></p></a>
     <span class="octicon octicon-clock"></span>
-    <p class="joined">Joined <%= $.format.prettyDate(created_at, "MMMM","d","yyyy") %></p>
+    <p class="joined">Joined on <%= $.format.date(created_at, "MMM d, yyyy") %></p>
 </script>
 
 <!--Follow (follow1-4)-->
