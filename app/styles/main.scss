@@ -42,6 +42,29 @@
   }
 }
 
+@mixin popup {
+  display: none;
+  width: 85px;
+  height: 25px;
+  background-color: HSLA(0, 0%, 19%, 1);
+  border-radius: 3px;
+  position: absolute;
+  margin-left: -64px;
+  margin-top: 30px;
+  span {
+    color: black;
+    position: absolute;
+    margin-top: -10px;
+    margin-left: 25px;
+  }
+  p {
+    margin: 0;
+    font-size: 12px;
+    padding: 5px 5px;
+    color: white;
+  }
+}
+
 // Custom Styles
 
 * {
@@ -163,28 +186,58 @@ a {
 }
 
 .popup1 {
-  display: inline-block;
-  width: 85px;
-  height: 25px;
-  background-color: HSLA(0, 0%, 19%, 1);
-  border-radius: 3px;
-  position: absolute;
-  margin-left: -64px;
-  margin-top: 30px;
+  @include popup;
+}
+
+.popup2 {
+  @include popup;
+  width: 170px;
+  margin-left: -100px;
   span {
-    color: black;
-    position: absolute;
-    margin-top: -10px;
-    margin-left: 25px;
-  }
-  p {
-    margin: 0;
-    font-size: 12px;
-    padding: 5px 5px;
-    color: white;
+    margin-left: 70px;
   }
 }
 
+.popup3 {
+  @include popup;
+  width: 60px;
+  margin-left: -48px;
+  span {
+    margin-left: 15px;
+  }
+  p {
+    padding: 5px 8px;
+  }
+}
+
+.popup4 {
+  @include popup;
+  width: 60px;
+  margin-top: 12px;
+  margin-left: 91px;
+  span {
+    margin-left: 19px;
+  }
+  p {
+    padding: 5px 7px;
+  }
+}
+
+a:hover .popup1 {
+  display: inline;
+}
+
+a:hover .popup2 {
+  display: inline;
+}
+
+a:hover .popup3 {
+  display: inline;
+}
+
+a:hover .popup4 {
+  display: inline;
+}
 
 // Middle Section ==========================
 
@@ -222,6 +275,26 @@ a {
     color: HSLA(0, 0%, 40%, 1);
     font-weight: 100;
   }
+}
+
+.user-popup {
+  display: inline;
+  @include popup;
+  width: 123px;
+  margin-left: 50px;
+  margin-top: 2px;
+  color: HSLA(0, 0%, 19%, .9);
+  span {
+    color: black;
+    margin-left: 55px;
+  }
+  p {
+    padding: 5px 8px;
+  }
+}
+
+a:hover .user-popup {
+  display: inline;
 }
 
 .user-email {
@@ -380,7 +453,7 @@ a {
   background-color: HSLA(105, 59%, 63%, 1);
   border: solid 1px HSLA(104, 44%, 46%, 1);
   border-radius: 3px;
-  box-shadow: 0px 0px 10px 5px HSLA(104, 44%, 46%, 1) inset;
+  box-shadow: 0px -5px 20px 0px HSLA(104, 44%, 46%, 1) inset;
   &:hover {
     background-color: HSLA(104, 44%, 46%, 1);
   }

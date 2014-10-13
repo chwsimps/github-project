@@ -55,9 +55,21 @@
                 <span class="octicon octicon-triangle-up"></span>
                 <p>Create new...</p>
               </div></a>
-            <a href="#"><span class="octicon octicon-inbox"></span></a>
-            <a href="#"><span class="octicon octicon-gear"></span></a>
-            <a href="#"><span class="octicon octicon-sign-out"></span></a>
+            <a href="#"><span class="octicon octicon-inbox"></span>
+              <div class="popup2">
+                <span class="octicon octicon-triangle-up"></span>
+                <p>You have unread notifications</p>
+              </div></a>
+            <a href="#"><span class="octicon octicon-gear"></span>
+            <div class="popup3">
+              <span class="octicon octicon-triangle-up"></span>
+              <p>Settings</p>
+            </div></a>
+            <a href="#"><span class="octicon octicon-sign-out"></span>
+            <div class="popup4">
+              <span class="octicon octicon-triangle-up"></span>
+              <p>Sign out</p>
+            </div></a>
           </div>
           <span class="circle"></span>
         </div>  <!--header-right-->
@@ -70,6 +82,10 @@
             <h1>Chase Simpson</h1>
             <p>chwsimps</p> -->
           </div> <!--user-box-->
+          <!-- <div class="user-popup">
+            <span class="octicon octicon-triangle-up"></span>
+            <p>Change your avatar</p>
+          </div></a> -->
           <div class="user-info">
             <!-- <span class="octicon octicon-location"> Atlanta, GA</span>
             <span class="octicon octicon-mail"> chase.w.simpson1@gmail.com<a href="#"></a></span>
@@ -173,7 +189,12 @@
 <!--Medium===============================-->
 <!--Image (user-box)-->
 <script type="text/template" id="user-box">
-  <a href="#"><img class="user-img" src="<%= avatar_url %>"/></a>
+  <a href="#"><img class="user-img" src="<%= avatar_url %>"/>
+  <div class="user-popup">
+    <span class="octicon octicon-triangle-up"></span>
+    <p>Change your avatar</p>
+  </div></a>
+  </a>
   <h1><%= name %></h1>
   <p><%= login %></p>
 </script>
