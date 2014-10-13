@@ -208,7 +208,7 @@
     <span class="octicon octicon-mail"></span>
     <a href="#"><p class="user-email"><%= email %></p></a>
     <span class="octicon octicon-clock"></span>
-    <p class="joined"><%= created_at %></p>
+    <p class="joined">Joined <%= $.format.prettyDate(created_at, "MMMM","d","yyyy") %></p>
 </script>
 
 <!--Follow (follow1-4)-->
@@ -236,7 +236,7 @@
   <div class="repo">
     <div class="repo-left">
       <a href="#"><h3><%= name %></h3></a>
-      <p><%= pushed_at %></p>
+      <p>Updated <%= $.format.prettyDate(pushed_at) %></p>
     </div>
     <div class="repo-right">
         <p><%= language %></p>
@@ -256,6 +256,7 @@
 
         <script src="scripts/token.js"></script>
         <!-- build:js scripts/main.js -->
+        <script src="scripts/dateFormat.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>
