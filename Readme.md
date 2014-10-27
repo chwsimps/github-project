@@ -1,5 +1,9 @@
-## Yo, I'm a Readme
+# GitHub Repositories Page Recreated
 
-Test
+How to view:
 
-You should probably update me so people looking at your code have an idea what it is being used for :)
+* Clone my repo
+* Run npm install
+* Run bower install
+
+Libraries Used: jQuery, Underscore, SASS
