@@ -243,7 +243,10 @@ a:hover .popup4 {
 
 .middle {
   @include outer-container;
-  margin: 20px 150px 0px;
+  max-width: 61.25em;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 // Middle Left=============================
@@ -520,11 +523,12 @@ a:hover .user-popup {
 // Footer ================================
 
 .footer {
-  width: 985px;
+  width: 980px;
   height: 100px;
-  margin-left: 145px;
-  border-top: solid 1px HSLA(0, 0%, 84%, 1);
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 40px;
+  border-top: solid 1px HSLA(0, 0%, 84%, 1);
 }
 
 .foot-left {
